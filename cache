@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 {optimize|clear}"
+    exit 1
+fi
+
+case "$1" in
+  optimize)
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
+    php artisan event:cache
+    composer dump-autoload --optimize
+    ;;
+  clear)
+    php artisan config:clear
+    php artisan route:clear
+    php artisan view:clear
+    php artisan event:clear
+    composer clear-cache
+    ;;
+  *)
+    echo "No argument supported ! '$1'"
+    echo "Usage : $0 {optimize|clear}"
+    exit 1
+    ;;
+esac
+

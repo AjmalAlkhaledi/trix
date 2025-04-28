@@ -17,6 +17,10 @@ class OnText
         if ($text === '/start') {
             new Start($event);
         }
+        
+        if ($text === '...etc') {
+            // new Etc($event);
+        }
 
     }
 }

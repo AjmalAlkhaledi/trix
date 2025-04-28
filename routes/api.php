@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\ValidationUpdates;
 use Illuminate\Support\Facades\Route;
+use GuzzleHttp\Promise\Promise;
+
 
 Route::get('/', function () {
-    return response('Hello world !!');
+    return response('Hello worlds !!');
 });
 
 /**
