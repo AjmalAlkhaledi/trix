@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "trix/trix",
     "type": "project",
-    "description": "Forked of Laravel 12 , Telegram bots framework, Thanks Laravel",
+    "description": "Forked of Laravel 12 , Telegram bots framework, Thank you Laravel",
     "keywords": ["trix", "framework", "telegram", "bots"],
     "license": "MIT",
     "require": {
