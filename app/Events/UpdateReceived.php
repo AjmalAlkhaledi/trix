@@ -37,6 +37,16 @@ class UpdateReceived
     {
         return $this->data;
     }
+    
+    public function getBotToken(): string 
+    {
+        return $this->data['api_key'];
+    }
+    
+    public function getBotId (): int 
+    {
+        return (int) \strstr($this->getBotToken(), ':', true);
+    }
 
     public function isCallback(): bool
     {
